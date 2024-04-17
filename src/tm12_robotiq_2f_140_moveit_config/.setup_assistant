@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: omron_tm12_robotiq_2f_140
+    relative_path: urdf/omron_tm12_robotiq_2f_140.urdf.xacro
+  srdf:
+    relative_path: config/tm12.srdf
+  package_settings:
+    author_name: Nemwel
+    author_email: nka@mail.com
+    generated_timestamp: 1709410300
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
