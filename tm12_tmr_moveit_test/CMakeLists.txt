@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(tm12_robotiq_2f_140_moveit_test)
+project(tm12_tmr_moveit_test)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -26,4 +26,3 @@ endif()
 ament_package()
 
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
-install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
