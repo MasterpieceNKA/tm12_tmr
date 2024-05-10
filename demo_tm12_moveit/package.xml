@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>hello_moveit</name>
+  <name>demo_tm12_moveit</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
   <maintainer email="nemwel.keoro@gmail.com">masterpiece</maintainer>
@@ -10,8 +10,9 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>rclcpp</depend>
-  <depend>moveit_ros_planning_interface</depend>
-  <depend>moveit_visual_tools</depend>
+  <depend>moveit_ros_planning_interface</depend> 
+  <exec_depend>moveit_configs_utils</exec_depend>
+  <exec_depend>urdf_launch</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

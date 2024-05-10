@@ -8,12 +8,12 @@ int main(int argc, char * argv[])
   // Initialize ROS and create the Node
   rclcpp::init(argc, argv);
   auto const node = std::make_shared<rclcpp::Node>(
-    "hello_moveit",
+    "demo_tm12_moveit",
     rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true)
   );
 
   // Create a ROS logger
-  auto const logger = rclcpp::get_logger("hello_moveit");
+  auto const logger = rclcpp::get_logger("demo_tm12_moveit");
 
   // Next step goes here
 
@@ -27,7 +27,7 @@ int main(int argc, char * argv[])
     msg.orientation.w = 1.0;
     msg.position.x = 0.28;
     msg.position.y = -0.2;
-    msg.position.z = 0.5;
+    msg.position.z = 1.5;
     return msg;
   }();
   move_group_interface.setPoseTarget(target_pose);

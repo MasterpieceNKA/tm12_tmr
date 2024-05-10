@@ -5,9 +5,9 @@ moveit_setup_assistant_config:
   srdf:
     relative_path: config/tm12.srdf
   package_settings:
-    author_name: Nemwel
-    author_email: nka@mail.com
-    generated_timestamp: 1709410300
+    author_name: na
+    author_email: na@ecmpg.hud.ac.uk
+    generated_timestamp: 1715357564
   control_xacro:
     command:
       - position
