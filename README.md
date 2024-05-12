@@ -1,27 +1,62 @@
-# tm12_tmr
-TM12 with robotiq 2F 140 gripper
+# Omron TM12 with robotiq 2F 140 gripper MoveIt 2
+
+This project is demonstrates a setup of Omron TM12 cobot with a Robotiq 2F 140 gripper for simulation and *control using the planning capabilities of [MoveIt 2](https://moveit.ros.org/). 
+
+The project also uses [MoveIt Task Constructor Framework](https://github.com/moveit/moveit_task_constructor.git) to simulate a simple pick and place task.
 
 
-mkdir -p tm12_tmr_mtc_demo/src
+The main branch is configured for [ROS2 Humble Hawksbill](https://docs.ros.org/en/humble/Installation.html).
 
-cd tm12_tmr_mtc_demo/src 
+## Setup
+Create workspece and clone the repository
+
+```
+mkdir -p tm12_tmr/src
+cd tm12_tmr/src 
 
 git clone https://github.com/MasterpieceNKA/tm12_tmr.git
+``` 
 
+Download dependencies
+
+```
 for repo in tm12_tmr/tm12_2f140.repos; do vcs import < "$repo"; done
 
 rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
+```
 
-# change directory into tm12_tmr_mtc_demo workspace
+Build workspace
+
+```
 cd .. 
 
 colcon build --mixin release --parallel-workers 3
+```
+## Running MoveIt demo
+ 
+Open new terminal and run
 
-# terminal 1
+```
+source install/setup.bash  && ros2 launch demo_tm12_moveit demo.launch.py
+```  
+
+[![YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt 2](https://img.youtube.com/vi/yElqukeEtx8/0.jpg)](https://www.youtube.com/watch?v=yElqukeEtx8 "YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt 2")
+
+## Running MoveIt 2 demo
+ 
+Open new terminal and run
+
+```
 source install/setup.bash  && ros2 launch demo_tm12_mtc demo.launch.py
+```
 
-# terminal 2
+Open second terminal or terminal tab and run
+```
 source install/setup.bash  && ros2 launch demo_tm12_mtc pick_placeready_place.launch.py
+```
+
+[![YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt Task Planner](https://img.youtube.com/vi/pyy533-DBvI/0.jpg)](https://www.youtube.com/watch?v=pyy533-DBvI "YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt Task Planner")
+
 
 
 
