@@ -8,7 +8,7 @@ The project also uses [MoveIt Task Constructor Framework](https://github.com/mov
 The main branch is configured for [ROS2 Humble Hawksbill](https://docs.ros.org/en/humble/Installation.html).
 
 ## Setup
-Create workspece and clone the repository
+1. Create workspace and clone the repository
 
 ```
 mkdir -p tm12_tmr/src
@@ -17,7 +17,7 @@ cd tm12_tmr/src
 git clone https://github.com/MasterpieceNKA/tm12_tmr.git
 ``` 
 
-Download dependencies
+2. Download dependencies
 
 ```
 for repo in tm12_tmr/tm12_2f140.repos; do vcs import < "$repo"; done
@@ -25,14 +25,14 @@ for repo in tm12_tmr/tm12_2f140.repos; do vcs import < "$repo"; done
 rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 ```
 
-Build workspace
+3. Build workspace
 
 ```
 cd .. 
 
 colcon build --mixin release --parallel-workers 3
 ```
-## Running MoveIt demo
+## Running MoveIt 2 demo
  
 Open new terminal and run
 
@@ -42,7 +42,7 @@ source install/setup.bash  && ros2 launch demo_tm12_moveit demo.launch.py
 
 [![YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt 2](https://img.youtube.com/vi/yElqukeEtx8/0.jpg)](https://www.youtube.com/watch?v=yElqukeEtx8 "YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt 2")
 
-## Running MoveIt 2 demo
+## Running MoveIt Task demo
  
 Open new terminal and run
 
@@ -55,6 +55,9 @@ Open second terminal or terminal tab and run
 source install/setup.bash  && ros2 launch demo_tm12_mtc pick_placeready_place.launch.py
 ```
 
-[![YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt Task Planner](https://img.youtube.com/vi/pyy533-DBvI/0.jpg)](https://www.youtube.com/watch?v=pyy533-DBvI "YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt Task Planner")
+[![YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt Task Planner](https://img.youtube.com/vi/pyy533-DBvI/0.jpg)](https://www.youtube.com/watch?v=pyy533-DBvI "YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt Task Planner") 
 
-
+## Future directions
+1. Create config file that uses DH parameters downloaded from an Omron TM12 cobot to update nominal URDF robot model
+2. Test code using actual Omron TM12 cobot
+3. Incorporate Hand-Eye calibration to use cobot's camera
