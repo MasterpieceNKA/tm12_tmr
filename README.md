@@ -58,5 +58,9 @@ source install/setup.bash  && ros2 launch demo_tm12_mtc pick_placeready_place.la
 [![YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt Task Planner](https://img.youtube.com/vi/pyy533-DBvI/0.jpg)](https://www.youtube.com/watch?v=pyy533-DBvI "YouTube: Omron TM12 with Robotiq 2F 140 gripper MoveIt Task Planner")
 
 
-
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/pyy533-DBvI" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
