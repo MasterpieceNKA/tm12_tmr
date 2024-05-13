@@ -30,7 +30,7 @@ rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 ```
 cd .. 
 
-colcon build --mixin release --parallel-workers 3
+colcon build --mixin release --executor sequential
 ```
 ## Running MoveIt 2 demo
  
