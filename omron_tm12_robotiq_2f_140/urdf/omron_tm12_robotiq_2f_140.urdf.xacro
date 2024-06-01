@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="tm12">
+<!-- Generate urdf from xacro: ros2 run xacro xacro  omron_tm12_robotiq_2f_140.urdf.xacro > omron_tm12_robotiq_2f_140.urdf -->
 
   <xacro:arg name="ns" default="" />
   <xacro:arg name="prefix" default="" />
