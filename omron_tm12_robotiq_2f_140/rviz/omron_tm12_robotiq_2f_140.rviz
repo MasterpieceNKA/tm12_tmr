@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 443
@@ -169,9 +170,9 @@ Visualization Manager:
       Frames:
         All Enabled: false
         base:
-          Value: false
+          Value: true
         flange:
-          Value: false
+          Value: true
         left_inner_finger:
           Value: false
         left_inner_finger_pad:
@@ -183,19 +184,19 @@ Visualization Manager:
         left_outer_knuckle:
           Value: false
         link_0:
-          Value: false
+          Value: true
         link_1:
-          Value: false
+          Value: true
         link_2:
-          Value: false
+          Value: true
         link_3:
-          Value: false
+          Value: true
         link_4:
-          Value: false
+          Value: true
         link_5:
-          Value: false
+          Value: true
         link_6:
-          Value: false
+          Value: true
         right_inner_finger:
           Value: false
         right_inner_finger_pad:
@@ -259,25 +260,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 4.461684226989746
+      Distance: 4.102147102355957
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: -0.06631458550691605
+        Y: 0.08789638429880142
+        Z: 0.07079310715198517
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8499999642372131
+      Pitch: 0.900000274181366
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.820000648498535
+      Yaw: 5.9850053787231445
     Saved: ~
 Window Geometry:
   Displays:
