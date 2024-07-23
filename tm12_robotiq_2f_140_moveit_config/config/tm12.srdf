@@ -9,7 +9,7 @@
     <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
-    <group name="tm12_arm">
+    <group name="tmr_arm">
         <joint name="virtual_joint"/>
         <joint name="base_fixed_joint"/>
         <joint name="joint_1"/>
@@ -20,7 +20,7 @@
         <joint name="joint_6"/>
         <joint name="flange_fixed_joint"/>
     </group>
-    <group name="tm12_gripper">
+    <group name="tmr_gripper">
         <joint name="robotiq_2f_140_joint"/>
         <joint name="finger_joint"/>
         <joint name="left_outer_finger_joint"/>
@@ -35,7 +35,7 @@
         <joint name="tm12_tcp_joint"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
-    <group_state name="home" group="tm12_arm">
+    <group_state name="home" group="tmr_arm">
         <joint name="joint_1" value="0"/>
         <joint name="joint_2" value="0"/>
         <joint name="joint_3" value="0"/>
@@ -43,14 +43,14 @@
         <joint name="joint_5" value="0"/>
         <joint name="joint_6" value="0"/>
     </group_state>
-    <group_state name="open" group="tm12_gripper">
+    <group_state name="open" group="tmr_gripper">
         <joint name="finger_joint" value="0"/>
     </group_state>
-    <group_state name="close" group="tm12_gripper">
+    <group_state name="close" group="tmr_gripper">
         <joint name="finger_joint" value="0.6923"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="tm12_end_effector" parent_link="flange" group="tm12_gripper"/>
+    <end_effector name="tmr_end_effector" parent_link="flange" group="tmr_gripper"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->

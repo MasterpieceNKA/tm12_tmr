@@ -4,10 +4,10 @@ moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControll
 
 moveit_simple_controller_manager:
   controller_names:
-    - tm12_arm_controller
-    - tm12_gripper_controller
+    - tmr_arm_controller
+    - tmr_gripper_controller
 
-  tm12_arm_controller:
+  tmr_arm_controller:
     type: FollowJointTrajectory
     action_ns: follow_joint_trajectory
     default: true
@@ -18,7 +18,7 @@ moveit_simple_controller_manager:
       - joint_4
       - joint_5
       - joint_6
-  tm12_gripper_controller:
+  tmr_gripper_controller:
     type: GripperCommand
     action_ns: gripper_cmd
     default: true

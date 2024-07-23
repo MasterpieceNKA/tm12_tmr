@@ -79,11 +79,29 @@ def generate_launch_description():
         output="both",
     )
 
+    pickplace_node = Node(
+        package="demo_tm12_mtc",
+        executable="pick_placeready_place",
+        output="screen",
+        parameters=[
+            os.path.join(
+                get_package_share_directory("demo_tm12_mtc"),
+                "config",
+                "tm12_config.yaml",
+            ),
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.robot_description_kinematics,
+            moveit_config.planning_pipelines,
+            moveit_config.joint_limits,
+        ],
+    )
+
     # Load controllers
     load_controllers = []
     for controller in [
-        "tm12_arm_controller",
-        "tm12_gripper_controller",
+        "tmr_arm_controller",
+        "tmr_gripper_controller",
         "joint_state_broadcaster",
     ]:
         load_controllers += [
@@ -101,6 +119,7 @@ def generate_launch_description():
             robot_state_publisher,
             run_move_group_node,
             ros2_control_node,
+            pickplace_node
         ]
         + load_controllers
     )

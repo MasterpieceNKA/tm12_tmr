@@ -4,9 +4,9 @@
     max_solutions: 10
 
     # Planning group and link names
-    arm_group_name: "tm12_arm"
-    eef_name: "tm12_end_effector"
-    hand_group_name: "tm12_gripper"
+    arm_group_name: "tmr_arm"
+    eef_name: "tmr_end_effector"
+    hand_group_name: "tmr_gripper"
     hand_frame: "tm12_tcp"
 
     # Poses

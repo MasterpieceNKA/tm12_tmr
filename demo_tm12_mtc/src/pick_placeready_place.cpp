@@ -103,9 +103,9 @@ mtc::Task MTCTaskNode::createTask()
   task.stages()->setName("demo task");
   task.loadRobotModel(node_);
 
-  const auto &arm_group_name = "tm12_arm";
-  const auto &hand_group_name = "tm12_gripper";
-  const auto &eef_name = "tm12_end_effector";
+  const auto &arm_group_name = "tmr_arm";
+  const auto &hand_group_name = "tmr_gripper";
+  const auto &eef_name = "tmr_end_effector";
   const auto &hand_frame = "tm12_tcp";
   const auto &world_frame = "world";
 
