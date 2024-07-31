@@ -4,6 +4,9 @@ from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
 from moveit_configs_utils import MoveItConfigsBuilder
 from launch_ros.parameter_descriptions import ParameterValue
+from launch.substitutions import PathJoinSubstitution
+from launch_ros.substitutions import FindPackageShare
+
 
 from moveit_configs_utils.launch_utils import (
     add_debuggable_node,
@@ -112,7 +115,11 @@ def generate_launch_description():
     ld.add_action(
         DeclareLaunchArgument(
             "rviz_config",
-            default_value=str(moveit_config.package_path / "config/moveit.rviz"),
+            default_value=PathJoinSubstitution([
+                    FindPackageShare('demo_tm12_moveit'),
+                    'config',
+                    'moveit.rviz'
+                ]) #str(moveit_config.package_path / "config/moveit.rviz"),
         )
     )
 
