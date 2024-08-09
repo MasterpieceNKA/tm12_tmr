@@ -20,7 +20,7 @@ git clone https://github.com/MasterpieceNKA/tm12_tmr.git
 2. Download dependencies
 
 ```
-for repo in tm12_tmr/tm12_2f140.repos; do vcs import < "$repo"; done
+for repo in tm12_tmr/tm12_2f140.repos; do vcs import < "$repo" --recursive; done
 
 rosdep update
 
